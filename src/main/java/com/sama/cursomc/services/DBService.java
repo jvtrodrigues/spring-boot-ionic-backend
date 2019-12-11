@@ -63,7 +63,7 @@ public class DBService {
 	public void instantiateTestDataBase() throws ParseException {
 		Categoria cat1 = new Categoria(null, "Informática");
 		Categoria cat2 = new Categoria(null, "Escritório");
-
+		Categoria cat3 = new Categoria(null,  "Programação");
 		Produto p1 = new Produto(null, "Computador", 2000.0);
 		Produto p2 = new Produto(null, "Impressora", 800.0);
 		Produto p3 = new Produto(null, "Mouse", 80.0);
@@ -75,7 +75,7 @@ public class DBService {
 		p2.getCategorias().addAll(Arrays.asList(cat1, cat2));
 		p3.getCategorias().addAll(Arrays.asList(cat1));
 
-		catRepo.saveAll(Arrays.asList(cat1, cat2));
+		catRepo.saveAll(Arrays.asList(cat1, cat2, cat3));
 		prodRepo.saveAll(Arrays.asList(p1, p2, p3));
 		
 		Estado est1 = new Estado(null, "Minas Gerais");
