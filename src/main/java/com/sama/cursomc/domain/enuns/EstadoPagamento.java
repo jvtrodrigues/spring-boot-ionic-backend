@@ -4,19 +4,19 @@ public enum EstadoPagamento {
 	PENDENTE(1, "Pendente"), QUITADO(2, "Quitado"), CANCELADO(3, "Cancelado");
 	
 	private int cod;
-	private String desc;
+	private String descricao;
 	
-	private EstadoPagamento(int cod, String desc) {
+	private EstadoPagamento(int cod, String descricao) {
 		this.cod = cod;
-		this.desc = desc;
+		this.descricao = descricao;
 	}
 	
 	public int getCod() {
 		return cod;
 	}
 	
-	public String getDesc() {
-		return desc;
+	public String getDescricao() {
+		return descricao;
 	}
 	
 	public static EstadoPagamento toEnum(Integer cod) {
